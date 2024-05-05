@@ -8,16 +8,16 @@
   <div class="container py-5">
     <ul>
       <li>
-        Место: {{ posts.location }}
+        Место: {{ post.location }}
       </li>
       <li>
-        Дата: {{ posts.date }}
+        Дата: {{ post.date }}
       </li>
       <li>
-        Категория: <a href="{% url 'blog:category_posts' posts.category %}">{{ posts.category }}</a>
+        Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
       </li>  
       <p>
-        <p>{{ posts.text }}</p>
+        <p>{{ post.text }}</p>
       </p>
   </div>     
 </article>               

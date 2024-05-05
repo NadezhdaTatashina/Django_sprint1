@@ -52,9 +52,9 @@ def index(request):
     return render(request, 'blog/index.html', context)
 
 
-def post_detail(request, pk):
+def post_detail(request, id):
     """Отдельная страница публикации."""
-    context = {'posts': posts[pk]}
+    context = {'post': posts[id]}
     return render(request, 'blog/detail.html', context)
 
 
