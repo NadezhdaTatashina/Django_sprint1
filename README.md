@@ -1,2 +1,2 @@
-# Blogicum# Django_Sprint1_main
-# Django_Sprint1_main
+# Blogicum# Django_Sprint1
+# Django_Sprint1
