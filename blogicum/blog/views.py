@@ -1,8 +1,7 @@
+from django.http import Http404
 from django.shortcuts import render
 
-# Create your views here.
-
-posts = [
+posts: list[dict] = [
     {
         'id': 0,
         'location': 'Остров отчаянья',
@@ -54,8 +53,13 @@ def index(request):
 
 def post_detail(request, id):
     """Отдельная страница публикации."""
-    context = {'post': posts[id]}
-    return render(request, 'blog/detail.html', context)
+    try:
+        publication = posts[id]
+    except IndexError as e:
+        raise Http404(f'Ошибка: {e}')
+    else:
+        context = {'post': publication}
+        return render(request, 'blog/detail.html', context)
 
 
 def category_posts(request, category_slug):

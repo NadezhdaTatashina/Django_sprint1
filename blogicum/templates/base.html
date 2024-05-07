@@ -16,8 +16,10 @@
   <body>	   
     {% include "includes/header.html" %}
     <main>
-      {% block content %}Контента пока нет{% endblock %}
+      <div class="container py-5">
+        {% block content %}Контента пока нет{% endblock %}
+      </div>
     </main>
-      {% include "includes/footer.html" %}
+    {% include "includes/footer.html" %}
   </body>
 </html>
